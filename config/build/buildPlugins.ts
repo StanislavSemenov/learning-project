@@ -1,4 +1,3 @@
-import path from "path";
 import { BuildOptions } from "./types/config";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import { WebpackPluginInstance, ProgressPlugin } from "webpack";
