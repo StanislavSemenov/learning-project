@@ -12,7 +12,7 @@ export const RoutePath: Record<AppRouters, string> = {
   [AppRouters.ABOUT]: 'about',
 }
 
-export const routeConfig: Record<AppRouters, RouteProps> = {
+export const RouterConfig: Record<AppRouters, RouteProps> = {
   [AppRouters.MAIN]: {
     path: RoutePath.main,
     element: <MainPage />,
