@@ -1,9 +1,8 @@
-import { Suspense } from "react";
-import { Route, Routes } from "react-router-dom";
-import { RouterConfig } from "shared/config/RouterConfig/RouterConfig";
+import { Suspense } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import { RouterConfig } from 'shared/config/RouterConfig/RouterConfig';
 
-export const AppRouter = () => {
-
+export function AppRouter() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <Routes>
@@ -11,14 +10,14 @@ export const AppRouter = () => {
           <Route
             key={path}
             path={path}
-            element={
+            element={(
               <div className="page-wrapper">
                 {element}
               </div>
-            }
+            )}
           />
         ))}
       </Routes>
     </Suspense>
   );
-};
+}
