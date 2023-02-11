@@ -8,12 +8,12 @@ export function buildLoaders({ isDev }: BuildOptions): RuleSetRule[] {
     test: /\.(js|jsx|tsx)$/,
     exclude: /node_modules/,
     use: {
-      loader: "babel-loader",
+      loader: 'babel-loader',
       options: {
         presets: ['@babel/preset-env'],
         plugins: [
           [
-            "i18next-extract",
+            'i18next-extract',
             {
               locales: ['ru', 'en'],
               keyAsDefaultValue: true,
@@ -53,7 +53,7 @@ export function buildLoaders({ isDev }: BuildOptions): RuleSetRule[] {
 
         },
       },
-      "sass-loader",
+      'sass-loader',
     ],
   };
 
@@ -61,12 +61,12 @@ export function buildLoaders({ isDev }: BuildOptions): RuleSetRule[] {
     test: /\.tsx?$/,
     use: 'ts-loader',
     exclude: /node_modules/,
-  }
+  };
   return [
     babelLoader,
     typescriptLoader,
     cssLoader,
     svgLoader,
     fileLoader,
-  ]
+  ];
 };
