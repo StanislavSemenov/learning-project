@@ -48,7 +48,10 @@ module.exports = {
     }],
     semi: ['error', 'always'],
     'no-extra-semi': 'off',
-    'i18next/no-literal-string': ['error', { markupOnly: true }],
+    'i18next/no-literal-string': ['error', {
+      markupOnly: true,
+      ignoreAttribute: ['to']
+    }],
   },
   globals: {
     __IS_DEV__: true,
