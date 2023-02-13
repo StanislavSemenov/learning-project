@@ -10,6 +10,7 @@ module.exports = {
     'plugin:react/jsx-runtime',
     'plugin:react-hooks/recommended',
     'plugin:jsx-a11y/recommended',
+    'plugin:i18next/recommended'
     // "plugin:import/recommended",
     // "airbnb"
   ],
@@ -27,6 +28,7 @@ module.exports = {
   'plugins': [
     'react',
     '@typescript-eslint',
+    'i18next'
   ],
   'rules': {
     'react/jsx-filename-extension': [1, { 'extensions': ['.js', '.jsx', '.ts', '.tsx'] }],
@@ -46,6 +48,7 @@ module.exports = {
     }],
     semi: ['error', 'always'],
     'no-extra-semi': 'off',
+    'i18next/no-literal-string': ['error', { markupOnly: true }],
   },
   globals: {
     __IS_DEV__: true,
