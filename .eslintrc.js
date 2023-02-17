@@ -3,7 +3,8 @@ module.exports = {
   'env': {
     'browser': true,
     'es2021': true,
-    'jest': true
+    'jest': true,
+    'node': true
   },
   'extends': [
     'eslint:recommended',
@@ -51,7 +52,8 @@ module.exports = {
     'no-extra-semi': 'off',
     'i18next/no-literal-string': ['error', {
       markupOnly: true,
-      ignoreAttribute: ['to']
+      ignoreAttribute: ['to', 'data-testid'],
+
     }],
   },
   globals: {
