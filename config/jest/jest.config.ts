@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+import  path  from 'path';
 /*
  * For a detailed explanation regarding each configuration property and type check, visit:
  * https://jestjs.io/docs/configuration
@@ -45,8 +47,9 @@ export default {
   setupFilesAfterEnv: ['<rootDir>/config/jest/setupTests.ts'],
 
   moduleNameMapper: {
-    '\\.s?css$': 'identity-obj-proxy',
-  },
+    '^.+\\.(css|less|scss)$': 'identity-obj-proxy',
+    '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
+    },
 
   // All imported modules in your tests should be mocked automatically
   // automock: false,
