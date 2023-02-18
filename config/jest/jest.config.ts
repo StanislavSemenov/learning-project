@@ -48,7 +48,7 @@ export default {
 
   moduleNameMapper: {
     '^.+\\.(css|less|scss)$': 'identity-obj-proxy',
-    '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
+    '\\.svg': path.resolve(__dirname, 'JestEmptyComponent.tsx'),
     },
 
   // All imported modules in your tests should be mocked automatically
