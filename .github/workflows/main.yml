@@ -1,9 +1,9 @@
-name: linting, testing, building
+name: linting, testing, building,
 on:
   push:
     branches: [ master ]
   pull_request:
-    branches: [ master ]
+    branches: [ master,lession3.6-ci-pipline ]
 jobs:
   pipeline:
     runs-on: ubuntu-latest
