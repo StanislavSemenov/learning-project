@@ -4,16 +4,16 @@ import AboutPage from './AboutPage';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator';
 
 export default {
-    title: 'pages/AboutPage',
-    component: AboutPage,
-    argTypes: {
-        backgroundColor: { control: 'color' },
-    },
+  title: 'pages/AboutPage',
+  component: AboutPage,
+  argTypes: {
+    backgroundColor: { control: 'color' },
+  },
 } as ComponentMeta<typeof AboutPage>;
 
 
 // eslint-disable-next-line react/jsx-props-no-spreading
-const Template: ComponentStory<typeof AboutPage> = (args) => <AboutPage />;
+const Template: ComponentStory<typeof AboutPage> = (args) => <AboutPage {...args} />;
 
 export const Normal = Template.bind({});
 Normal.args = {};

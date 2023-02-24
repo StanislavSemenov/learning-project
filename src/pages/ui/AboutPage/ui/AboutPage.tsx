@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 
-function AboutPage() {
+function AboutPage(_props: any) {
   const { t } = useTranslation('about');
 
   return (
