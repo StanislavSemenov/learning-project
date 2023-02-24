@@ -13,6 +13,6 @@ render(
       </ThemeProvider>
     </ErrorBoundary>
   </BrowserRouter>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
 
