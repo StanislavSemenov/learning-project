@@ -49,6 +49,7 @@ module.exports = {
             },
         ],
         'max-len': ['error', { ignoreComments: true, code: 100 }],
+        'linebreak-style': 0,
     },
     globals: {
         __IS_DEV__: true,
@@ -61,5 +62,4 @@ module.exports = {
             },
         },
     ],
-    "linebreak-style": ["error", "windows"]
 };
