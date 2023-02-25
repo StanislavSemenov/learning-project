@@ -1,2 +1,0 @@
-# learning-project
-Обучающий проект
