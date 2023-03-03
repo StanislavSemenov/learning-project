@@ -1,9 +1,12 @@
 {
     "cSpell.words": [
+        "войти",
+        "Bойти",
         "linebreak"
     ],
     "i18n-ally.localesPaths": [
-      "public/locales",
-      "src/shared/config/i18n"
-    ]
+        "public/locales",
+        "src/shared/config/i18n"
+    ],
+    "editor.tabSize": 4
 }
