@@ -8,7 +8,6 @@ const AboutPage = (props: any) => {
     return (
         <div>
             {t('О сайте')}
-            <Counter />
         </div>
     );
 };
