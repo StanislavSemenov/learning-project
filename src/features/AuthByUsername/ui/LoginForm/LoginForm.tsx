@@ -11,11 +11,11 @@ import { loginActions } from '../../model/slice/loginSlice';
 import cls from './LoginForm.module.scss';
 import { getLoginState } from '../../model/selectors/getLoginState/getLoginState';
 
-interface LoginFormProps {
+export interface LoginFormProps {
   className?: string;
 }
 
-export const LoginForm = memo((props:LoginFormProps) => {
+const LoginForm = memo((props: LoginFormProps) => {
     const {
         className,
     } = props;
@@ -73,3 +73,5 @@ export const LoginForm = memo((props:LoginFormProps) => {
         </div>
     );
 });
+
+export default LoginForm;
