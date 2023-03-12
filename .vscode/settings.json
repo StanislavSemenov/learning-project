@@ -3,8 +3,11 @@
         "авторизации",
         "войти",
         "пароль",
+        "Профиль",
+        "сайте",
         "Форма",
         "Bойти",
+        "lastname",
         "linebreak",
         "reduxjs"
     ],
@@ -12,5 +15,6 @@
         "public/locales",
         "src/shared/config/i18n"
     ],
-    "editor.tabSize": 4
+    "editor.tabSize": 4,
+    "i18n-ally.keystyle": "nested"
 }
