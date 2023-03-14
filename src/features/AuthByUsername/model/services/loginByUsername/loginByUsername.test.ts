@@ -3,7 +3,6 @@ import { userActions } from 'entities/User';
 import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
 import { loginByUsername } from './loginByUsername';
 
-
 describe('loginByUsername.test', () => {
     // let dispatch: Dispatch;
     // let getState: () => StateSchema;
@@ -39,7 +38,6 @@ describe('loginByUsername.test', () => {
 
     test('success login', async () => {
         const userValue = { username: '123', id: '1' };
-      
 
         const thunk = new TestAsyncThunk(loginByUsername);
         thunk.api.post.mockReturnValue(Promise.resolve({ data: userValue }));
