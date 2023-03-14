@@ -3,13 +3,13 @@ import { LoginSchema } from '../types/loginSchema';
 import { loginByUsername } from '../services/loginByUsername/loginByUsername';
 
 const initialState: LoginSchema = {
+    isLoading: false,
     username: '',
     password: '',
-    isLoading: false,
 };
 
 export const loginSlice = createSlice({
-    name: 'user',
+    name: 'login',
     initialState,
     reducers: {
         setUsername: (state, action: PayloadAction<string>) => {
@@ -33,8 +33,8 @@ export const loginSlice = createSlice({
                 state.error = action.payload;
             });
     },
-
 });
 
+// Action creators are generated for each case reducer function
 export const { actions: loginActions } = loginSlice;
 export const { reducer: loginReducer } = loginSlice;

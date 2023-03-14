@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux';
 import { memo, useCallback } from 'react';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { useAppDispatch } from 'shared/lib/hook/useAppDispatch/useAppDispatch';
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { getLoginUsername } from '../../model/selectors/getLoginUsername/getLoginUsername';
 import { getLoginPassword } from '../../model/selectors/getLoginPassword/getLoginPassword';
 import { getLoginIsLoading } from '../../model/selectors/getLoginIsLoading/getLoginIsLoading';
@@ -45,7 +45,7 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
         if (result.meta.requestStatus === 'fulfilled') {
             onSuccess();
         }
-    }, [dispatch, onSuccess, password, username]);
+    }, [onSuccess, dispatch, password, username]);
 
     return (
         <DynamicModuleLoader
@@ -56,6 +56,7 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
                 <Text title={t('Форма авторизации')} />
                 {error && <Text text={t('Вы ввели неверный логин или пароль')} theme={TextTheme.ERROR} />}
                 <Input
+                    autofocus
                     type="text"
                     className={cls.input}
                     placeholder={t('Введите username')}

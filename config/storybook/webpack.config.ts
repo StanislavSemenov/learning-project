@@ -23,6 +23,14 @@ export default ({ config }: {config: webpack.Configuration}) => {
         return rule;
     });
 
+    /* исправление ошибки storybook */
+    if (config!.resolve!.modules) {
+        config!.resolve!.modules = [
+            path.resolve(__dirname, '../../src'),
+            'node_modules',
+        ];
+    }
+
     config!.module!.rules.push({
         test: /\.svg$/,
         use: ['@svgr/webpack'],
