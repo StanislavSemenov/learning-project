@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
-const MainPage = memo((props: any) => {
+const MainPage = memo(() => {
     const { t } = useTranslation();
 
     return (
