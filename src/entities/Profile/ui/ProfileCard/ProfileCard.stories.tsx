@@ -13,6 +13,7 @@ export default {
     },
 } as ComponentMeta<typeof ProfileCard>;
 
+// eslint-disable-next-line react/jsx-props-no-spreading
 const Template: ComponentStory<typeof ProfileCard> = (args) => <ProfileCard {...args} />;
 
 export const Primary = Template.bind({});
@@ -20,11 +21,11 @@ Primary.args = {
     data: {
         username: 'admin',
         age: 22,
-        country: Country.Ukraine,
-        lastname: 'ulbi tv',
-        first: 'asd',
-        city: 'asf',
-        currency: Currency.USD,
+        country: Country.Russia,
+        lastname: 'Stas',
+        first: 'Semenov',
+        city: 'Moscow',
+        currency: Currency.RUB,
         avatar,
     },
 };
